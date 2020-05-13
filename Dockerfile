@@ -5,4 +5,6 @@ LABEL description="Runs serverless commands"
 
 RUN npm install -s -g serverless@1.70.0
 
-ENTRYPOINT [ "sls" ]
+COPY ./entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT [ "/entrypoint.sh" ]
