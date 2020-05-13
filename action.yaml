@@ -1,4 +1,4 @@
-name: sls
+name: sls-action
 description: Github action for serverless framework
 inputs:
   args:
