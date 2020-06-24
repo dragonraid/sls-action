@@ -1,4 +1,4 @@
-# sls-action
+# Serverless Action [![LICENSE](https://img.shields.io/badge/License-Apache--2.0-green.svg?style=flat-square)](LICENSE) [![LICENSE](https://img.shields.io/badge/License-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![996.icu](https://img.shields.io/badge/Link-996.icu-red.svg?style=flat-square)](https://996.icu)
 
 Github action for serverless framework
 
@@ -8,17 +8,9 @@ Github action for serverless framework
 | :---- | ----------------------------------: | -------------------: | -------: |
 | args  | arguments/options for `sls` command | `--stage dev deploy` |      yes |
 
-## Example usage
+## Usage
 
-```bash
-uses: dragonraid/sls-action@v1
-with:
-  args: '--stage prod deploy'
-```
-
-## Full example
-
-```bash
+```yaml
 name: deploy lambda functions
 
 on:
@@ -34,14 +26,14 @@ env:
 jobs:
   deploy_serverless:
     name: deploy
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - name: clone local repository
         uses: actions/checkout@v2
       - name: npm install
         run: npm install
       - name: deploy
-        uses: dragonraid/sls-action@v1
+        uses: Teakowa/serverless-action@v1.73.1
         with:
           args: --stage prod deploy
 ```
