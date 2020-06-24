@@ -1,4 +1,4 @@
-name: sls-action
+name: 'Serverless Action'
 description: Github action for serverless framework
 inputs:
   args:
@@ -10,5 +10,5 @@ runs:
   args:
     - ${{ inputs.args }}
 branding:
-  icon: 'arrow-up-right' 
-  color: orange
+  icon: 'zap' 
+  color: black
