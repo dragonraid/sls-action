@@ -33,7 +33,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: deploy
-        uses: Teakowa/serverless-action@v1.73.1
+        uses: Teakowa/serverless-action@master
         with:
           args: --stage prod deploy
 ```
