@@ -1,5 +1,8 @@
 # sls-action
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![version](https://img.shields.io/badge/version-1.2-blue)
+
 Github action for serverless framework
 
 ## Inputs
@@ -10,7 +13,7 @@ Github action for serverless framework
 
 ## Example usage
 
-```bash
+```yaml
 uses: dragonraid/sls-action@v1
 with:
   args: '--stage prod deploy'
@@ -18,7 +21,7 @@ with:
 
 ## Full example
 
-```bash
+```yaml
 name: deploy lambda functions
 
 on:
@@ -41,7 +44,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: deploy
-        uses: dragonraid/sls-action@v1
+        uses: dragonraid/sls-action@v1.2
         with:
           args: --stage prod deploy
 ```
