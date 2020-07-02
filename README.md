@@ -13,7 +13,7 @@ Github action for serverless framework
 
 ## Example usage
 
-```bash
+```yaml
 uses: dragonraid/sls-action@v1
 with:
   args: '--stage prod deploy'
