@@ -14,7 +14,7 @@ Github action for serverless framework
 ## Example usage
 
 ```yaml
-uses: dragonraid/sls-action@v1
+uses: dragonraid/sls-action@v1.2
 with:
   args: '--stage prod deploy'
 ```
