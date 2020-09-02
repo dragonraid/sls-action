@@ -1,6 +1,6 @@
 FROM node:14-alpine3.11
 
-RUN npm install -s -g serverless@1.80.0
+RUN npm install -s -g serverless@1.81.0
 
 COPY ./entrypoint.sh /entrypoint.sh
 
