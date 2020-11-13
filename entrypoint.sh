@@ -3,4 +3,4 @@
 # instead of array
 echo ">>> Running sls $@"
 sls $@
-echo ">>> Compleated"
+echo ">>> Completed"
