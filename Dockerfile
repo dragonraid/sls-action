@@ -1,13 +1,12 @@
-FROM node:14-alpine3.11
+FROM node:14
 
 LABEL owner="Lukas Novotny <lucass.novotny@gmail.com>" \
       description="Runs serverless commands"
 
-# TODO: Check for support to pass github docker action build argument
-ARG version=2.4.0
+WORKDIR /app
 
-RUN npm install -s -g serverless@${version}
+COPY . .
 
-COPY ./entrypoint.sh /entrypoint.sh
+RUN npm install
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "/app/entrypoint.sh" ]

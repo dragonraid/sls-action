@@ -1,0 +1,21 @@
+{
+  "name": "sls-action",
+  "version": "2.0.0",
+  "description": "Serverless framework action",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonraid/sls-action.git"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "Lukas Novotny",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragonraid/sls-action/issues"
+  },
+  "homepage": "https://github.com/dragonraid/sls-action#readme",
+  "dependencies": {
+    "serverless": "^2.11.0"
+  }
+}
