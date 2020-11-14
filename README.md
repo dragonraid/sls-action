@@ -14,7 +14,7 @@ Github action for serverless framework
 ## Example usage
 
 ```yaml
-uses: dragonraid/sls-action@v1.2
+uses: dragonraid/sls-action@v2.0.0
 with:
   args: '--stage prod deploy'
 ```
@@ -44,7 +44,13 @@ jobs:
       - name: npm install
         run: npm install
       - name: deploy
-        uses: dragonraid/sls-action@v1.2
+        uses: dragonraid/sls-action@v2.0.0
         with:
           args: --stage prod deploy
 ```
+
+## v1 vs v2
+
+The behavior and configuration of `sls-action` does not change, so no action is required by end-users when switching to it.
+
+> NOTE: versioning schema has changed from vX.Y to vX.Y.Z to uphold to semver.
