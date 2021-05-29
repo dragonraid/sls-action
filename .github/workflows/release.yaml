@@ -1,0 +1,40 @@
+name: release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create changelog
+        id: changelog
+        uses: dragonraid/changelog-emitter@v0.2.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump tag
+        id: tag
+        uses: mathieudutour/github-tag-action@v5.5
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          release_branches: master
+          default_bump: minor
+
+      - name: Create github release
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.repos.createRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag_name: `${{ steps.tag.outputs.new_tag }}`,
+                name: `${{ steps.tag.outputs.new_tag }}`,
+                body: `${{ steps.changelog.outputs.changelog }}`,
+            });
