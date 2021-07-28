@@ -2,6 +2,7 @@
 # shellcheck disable=SC2068
 # Using this script because github action passess the arguments as strings
 # instead of array
+set -e
 echo ">>> Running sls $*"
 /app/node_modules/.bin/sls $@
 echo ">>> Completed"
