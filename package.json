@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/dragonraid/sls-action#readme",
   "dependencies": {
-    "serverless": "^2.60.2"
+    "serverless": "^2.64.1"
   }
 }
